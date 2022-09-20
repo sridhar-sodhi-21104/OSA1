@@ -1,4 +1,5 @@
 all:
-	yasm -f elf64 -o AO.o AO.asm
-	gcc -o AO AO.o -no-pie
-	./AO
+	yasm -f elf64 -o A0.o A0.asm
+	gcc -o A0 A0.o -no-pie
+	./A0
+	
