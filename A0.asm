@@ -33,8 +33,7 @@ inp db "%d",0
 inps db "%s",0
 string2 db "Entered string is : %s",10,0
 string1 db "Entered number is : %d",10,0
-
 s times 100 db 0
 
 section .bss
-num res 4
+    num resb 4
