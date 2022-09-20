@@ -38,8 +38,8 @@ main:
     call exit
 
 section .data
-inp db "Enter a number :",10,0
-inps db "Enter a string :",10,0
+inp db "Enter a number : ",0
+inps db "Enter a string : ",0
 outp db "%d",0
 outps db "%s",0
 string2 db "Entered string is : %s",10,0
