@@ -4,12 +4,21 @@ extern printf,scanf,exit
 section.text
 main:
     push rbp
+
+    xor eax,eax
     lea rdi,[inp]
+    call printf
+
+    lea rdi,[outp]
     lea rsi,[num]
     xor eax,eax
     call scanf
 
+    xor eax,eax
     lea rdi,[inps]
+    call printf
+
+    lea rdi,[outps]
     lea rsi,[s]
     xor eax,eax
     call scanf
@@ -23,14 +32,16 @@ main:
     lea rsi,[s]
     xor eax,eax
     call printf
+
     pop rbp
     xor eax,eax
     call exit
 
 section .data
-
-inp db "%d",0
-inps db "%s",0
+inp db "Enter a number : %d",10,0
+inps db "Enter a string : %s",10,0
+outp db "%d",0
+outps db "%s",0
 string2 db "Entered string is : %s",10,0
 string1 db "Entered number is : %d",10,0
 s times 100 db 0
